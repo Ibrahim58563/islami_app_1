@@ -125,7 +125,6 @@ class _QuranTabState extends State<QuranTab> {
     "الفلق",
     "الناس"
   ];
-
   @override
   Widget build(BuildContext context) {
     return Column(
