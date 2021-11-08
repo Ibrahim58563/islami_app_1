@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app_1/hadith/HadithDetailsScreen.dart';
+//import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'HomePage.dart';
 import 'hadith/HadithScreen.dart';
@@ -35,8 +37,18 @@ class MyApp extends StatelessWidget {
       routes: {
         HomePage.routeName: (buildContext) => HomePage(),
         SuraDetails.routeName: (buildContext) => SuraDetails(),
+        HadithDetailsScreen.routeName: (buildContext) => HadithDetailsScreen(),
       },
       initialRoute: HomePage.routeName,
+      // localizationsDelegates: AppLocalizations.localizationsDelegates,
+      // [
+      //   AppLocalizations.delegate,
+      //   GlobalMaterialLocalizations.delegate,
+      //   GlobalWidgetsLocalizations.delegate,
+      //   GlobalCupertinoLocaliztions.delegate,
+      // ],
+      // supportedLocales: AppLocalizations.supportedLocales,
+      locale: Locale('ar'),
     );
   }
 }

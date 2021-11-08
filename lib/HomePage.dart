@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
           appBar: AppBar(
             title: Center(
               child: Text(
-                "إسلامي",
+                ' Applocalization.of(context)?.app_title',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 25,
