@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app_1/Settings_Tab/SettingsTab.dart';
 import '../main.dart';
-import 'hadith/HadithScreen.dart';
+import 'hadith/hadith_screen.dart';
 import 'quran/quran.dart';
 import 'radio/radio.dart';
 import 'sebha/sebha.dart';
@@ -64,13 +65,15 @@ class _HomePageState extends State<HomePage> {
                       width: 48,
                     ),
                     label: ('quran')),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.settings), label: ('quran')),
               ],
             ),
           ),
           appBar: AppBar(
             title: Center(
               child: Text(
-                ' Applocalization.of(context)?.app_title',
+                'Islami',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 25,
@@ -82,23 +85,30 @@ class _HomePageState extends State<HomePage> {
             backgroundColor: Colors.transparent,
             foregroundColor: Colors.transparent,
           ),
-          body: Container(child: getCurrentPage()),
+          body: Container(child: views[currentPage]),
         ),
       ],
     );
   }
 
-  Widget getCurrentPage() {
-    if (currentPage == 0) {
-      return RadioTab();
-    } else if (currentPage == 1) {
-      return SebhaTab();
-    } else if (currentPage == 2) {
-      return HadithScreen();
-    } else if (currentPage == 3) {
-      return QuranTab();
-    }
-  }
+  List<Widget> views = [
+    RadioTab(),
+    SebhaTab(),
+    HadithScreen(),
+    QuranTab(),
+    SettingsTab()
+  ];
 }
 
 class HadithList {}
+//  Widget getCurrentPage() {
+//   if (currentPage == 0) {
+//     return RadioTab();
+//   } else if (currentPage == 1) {
+//     return SebhaTab();
+//   } else if (currentPage == 2) {
+//     return HadithScreen();
+//   } else if (currentPage == 3) {
+//     return QuranTab();
+//   }
+// }

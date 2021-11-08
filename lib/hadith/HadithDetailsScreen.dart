@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islami_app_1/hadith/HadithScreen.dart';
+import 'package:islami_app_1/hadith/hadith_screen.dart';
 
 class HadithDetailsScreen extends StatelessWidget {
   static const String routeName = 'hadith-details';

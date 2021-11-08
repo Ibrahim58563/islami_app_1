@@ -16,7 +16,7 @@ class _SuraDetailsState extends State<SuraDetails> {
   @override
   Widget build(BuildContext context) {
     var args = ModalRoute.of(context)?.settings.arguments as SuraDetailsArgs;
-    if (ayat.isEmpty) readSura(args.suraIndex);
+    if (ayat.isEmpty) read_sura(args.suraIndex);
     return Stack(
       children: [
         Image(
@@ -68,8 +68,8 @@ class _SuraDetailsState extends State<SuraDetails> {
     );
   }
 
-  void readSura(int index) async {
-    String fileName = "assets/files/${index + 1}.txt";
+  void read_sura(int index) async {
+    String fileName = "assets/suras/${index + 1}.txt";
     String fileContent = await rootBundle.loadString(fileName);
     print(fileContent);
     List<String> verses = fileContent.split('\n');
